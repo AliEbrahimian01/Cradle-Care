@@ -4,6 +4,7 @@ Final Bachelor Project - Biomedical Engineering - Bio Electric - Cradle care wit
 
 ## Tree of Project
 
+```plaintext
 Cradle-Care/
 │
 ├── local_media/
@@ -66,4 +67,4 @@ Cradle-Care/
 ├── LICENSE
 ├── TODO.md
 └── setup.sh
-
+```
