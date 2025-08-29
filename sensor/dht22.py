@@ -10,8 +10,8 @@ DHT_PIN = board.D17
 dht_device = adafruit_dht.DHT22(DHT_PIN)
 
 
-LOG_PATH = "logs/sensors/"
-DHT22_FILE_NAME_LOGS = "dht_log.csv"
+LOG_PATH = "data/dht22/"
+DHT22_FILE_NAME_LOGS = "dht22.csv"
 DHT22_HEADER_LOG = "Date, Time, Temperature , Humidity\r\n"
 
 
