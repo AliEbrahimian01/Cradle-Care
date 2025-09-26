@@ -208,4 +208,9 @@ __marimo__/
 
 
 # Datas
-data/
+# Ignore all files in 'data/' and subdirectories
+data/**
+
+# But keep the directories themselves (inside 'data/')
+!data/**/
+
