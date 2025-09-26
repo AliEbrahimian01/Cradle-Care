@@ -3,10 +3,11 @@
 import time
 from sensor import dht22
 
-
-while True:
-    dht22.log()
-    time.sleep(30)
+def main():
+    while True:
+        dht22.log()
+        #mlx90614.log()
+        time.sleep(30)
 
 
 
