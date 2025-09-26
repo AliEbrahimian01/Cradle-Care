@@ -17,7 +17,7 @@ def capture():
     """Take a picture with OV5647 camera and save it."""
     os.makedirs(LOG_PATH, exist_ok=True)
 
-    timestamp = time.strftime("%Y-%m-%d_%-%M-%S")
+    timestamp = time.strftime("%Y-%m-%d_%H-%M-%S")
     file_path = os.path.join(LOG_PATH, f"{timestamp}_{CAMERA_FILE_NAME}")
 
     picam2.start()
