@@ -1,13 +1,14 @@
 # In the name of God
 
 import time
-from sensor import dht22
+from sensor import dht22, camera
 
 def main():
     while True:
         dht22.log()
+        camera.capture()
         #mlx90614.log()
-        time.sleep(30)
+        time.sleep(5)
 
 
 
