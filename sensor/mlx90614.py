@@ -28,25 +28,25 @@ def read():
 
 def log():
     """Save read data from MLX90614 in `mlx90614`."""
-    amient_temp, obbject_temp = read()
+    ambient_temp, object_temp = read()
 
     # If no data exist, don't save.
     if ambient_temp is None or object_temp is None:
         return False
 
     # Ensure log directory exists
-    os.makedires(LOG_PATH, exist_ok=True)
+    os.makedirs(LOG_PATH, exist_ok=True)
 
     file_path = os.path.join(LOG_PATH, MLX_FILE_NAME_LOGS)
-    file_exist = os.pathisfile(file_path)
+    file_exist = os.path.isfile(file_path)
 
     with open(file_path, "a+") as f:
         if not file_exist or os.stat(file_path).st_size == 0:
             f.write(MLX_HEADER_LOG)
 
         Date = time.strftime("%Y-%m-%d")
-        Time = time.strftime("%H:%M:$S")
-        d.write(f"{Date}, {Time}, {ambient_temp:.2f}, {object_temp:.2f}\r\n")
-        print(f"Logged MLX90614: Amient={ambinet_temp:.1f}°C - object={object_temp:.1f}°C")
+        Time = time.strftime("%H:%M:%S")
+        f.write(f"{Date}, {Time}, {ambient_temp:.2f}, {object_temp:.2f}\r\n")
+        print(f"Logged MLX90614: Amient={ambient_temp:.1f}°C - object={object_temp:.1f}°C")
         return True
 
