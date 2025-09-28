@@ -13,7 +13,7 @@ mlx = adafruit_mlx90614.MLX90614(i2c)
 # Log configuration
 LOG_PATH = "data/mlx90614/"
 MLX_FILE_NAME_LOGS = "mlx90614.csv"
-MLX_HEADER_LOG = "Date, Time, AmbientTemp,, ObjectTemp\r\n"
+MLX_HEADER_LOG = "Date, Time, AmbientTemp, ObjectTemp\r\n"
 
 def read():
     """Save read data from MLX90614 sensor. Returns(ambbient_temp, object_temp) or (None , None)"""
